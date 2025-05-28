@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.atlas-button');
     let posX = 0;
     let posY = 0;
-    let speedX = 1.;
+    let speedX = 1.5;
     let speedY = 1.0;
     let directionX = 1;
     let directionY = 1;
