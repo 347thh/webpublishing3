@@ -258,7 +258,6 @@ header {
     background-color: #131B23;
 }
 
-/* 이미지 각도 */
 .rotate-item:nth-child(1) { transform: translate(-50%, -50%) translate(0, -700px); }
 .rotate-item:nth-child(2) { transform: translate(-50%, -50%) rotate(15deg) translate(0, -700px); }
 .rotate-item:nth-child(3) { transform: translate(-50%, -50%) rotate(30deg) translate(0, -700px); }
