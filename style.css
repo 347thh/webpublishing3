@@ -1,4 +1,6 @@
 html body {
+    position: relative;
+
     font-family: "42dot Sans", sans-serif; 
     font-weight: 400;
     line-height: 1.6;
@@ -11,6 +13,8 @@ html body {
 
     scroll-behavior: smooth;
     overflow-x: hidden;
+
+    background-color: #FFFBFF;
 }
 
 hr {
@@ -20,7 +24,7 @@ hr {
 }
 
 header {
-    background-color: white;
+    background-color: #FFFBFF;
 }
 
 /* class */
@@ -34,6 +38,55 @@ header {
     margin: 0 auto;
 }
 
+/* atlas 버튼 */
+
+.atlas-button {
+    position: fixed;
+    display: flex;
+
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+
+    background-color: #FFFBFF;
+    border: 2px solid #131B23;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    z-index: 1000;
+
+    transition: all 0.3s ease;
+}
+
+.atlas-button a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+
+    color: #131B23;
+
+    text-decoration: none;
+
+    padding-right: 30px;
+}
+
+.atlas-button:hover {
+    background-color: #FFFA75;
+    border: 2px solid #131B23;
+}
+
+.atlas-button:hover a {
+    
+}
+
 /* 헤더 */
 
     /* 라인 */
@@ -42,7 +95,7 @@ header {
         height: 12px;
         width: 620px;
 
-        background-color: blue;
+        background-color: #840032;
     }
 
     .nav-line{
@@ -65,7 +118,7 @@ header {
         width: 620px;
         height: 290px;
 
-        background-color: rgb(242, 242, 242);
+        background-color: #EEEEEE;
     }
 
     .title-text {
@@ -73,7 +126,7 @@ header {
         font-weight: 400;
         font-size: 6rem;
         line-height: 1;
-        color: blue;
+        color: #840032;
 
         text-align: left;
     }
@@ -85,7 +138,7 @@ header {
         width: 190px;
         height: 290px;
         
-        background-color: white;
+        background-color: #FFFBFF;
     }
 
     .nav-to-1, .nav-to-2 {
@@ -101,7 +154,7 @@ header {
 
     .nav-to-1 a, .nav-to-2 a {
         text-decoration: none;
-        color: black;
+        color: #131B23;
 
         font-weight: 300;
         font-size: 1.15rem;
@@ -111,80 +164,106 @@ header {
     }
 
     .nav-to-1 {
-        background-color: white;
-        color: black;
+        background-color: #FFFBFF;
+        color: #131B23;
     }
 
     .nav-to-1:hover {
-        background-color: black;
+        background-color: #131B23;
     }
 
     .nav-to-1 a:hover {
-        color: white;
+        color: #FFFBFF;
     }
 
     .nav-to-2 {
-        background-color: white;
-        color: black;
+        background-color: #FFFBFF;
+        color: #131B23;
 
         text-decoration: underline; 
     }
 
     .nav-to-2:hover {
-        background-color: yellow;
+        background-color: #FFFA75;
     }
 
 /* 어바웃 */
 
     .about-wrap {
         position: relative;
-        display: flex;
-        margin: 0 auto;
-
-        align-items: center;
-        justify-content: center;
-
         width: 1000px;
         height: 2000px;
+        margin: 0 auto;
     }
 
     .about-text {
 
         font-size: 1.3rem;
         text-align: center;
+        font-weight: 300;
     }
+
+    /* 어바웃 팝업 */
+
+    .about-popup {
+        display: none;
+        position: fixed;
+
+        z-index: 1;
+
+        left: 0;
+        top: 0;
+
+        width: 500px;
+        height: 300px;
+
+        overflow: hidden;
+        
+        background-color: #FFFBFF;
+        border: 2px solid #131B23;
+    }
+
+    .about-popup-content {
+        padding: 20px;
+
+        border: border: 2px solid #131B23;
+    }
+
+    .
 
     /* 이미지 캐러셀 */ /* 추후 수정 (자꾸 옆으로 조금씩 이동함) */
 
     .img-rotate-box {
         position: absolute;
         top: 50%;
-        left: 46%;
-
+        left: 50%;
         width: 1000px;
-        height: 1000px;
-
+        height: 2000px;
         transform: translate(-50%, -50%);
-
         animation: rotate 20s linear infinite;
-        transform-origin: center center;
+    }
+
+    .about-text,
+    .img-rotate-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
 
     .rotate-item {
         position: absolute;
-
         top: 50%;
         left: 50%;
-
         transform-origin: center center;
     }
 
         /* 이미지 대체 프레임*/ /* 추후 수정 (이미지 만들면 바꾸기) */
         .image-frame {
-            width: 90px;
+            width: 80px;
             height: 80px;
 
-            background-color: black;
+            background-color: #131B23;
         }
 
         .rotate-image {
@@ -195,36 +274,38 @@ header {
         }
 
         /* 이미지 각도*/
-        .rotate-item:nth-child(1) { transform: rotate(0deg) translate(0, 700px); }
-        .rotate-item:nth-child(2) { transform: rotate(15deg) translate(0, 700px); }
-        .rotate-item:nth-child(3) { transform: rotate(30deg) translate(0, 700px); }
-        .rotate-item:nth-child(4) { transform: rotate(45deg) translate(0, 700px); }
-        .rotate-item:nth-child(5) { transform: rotate(60deg) translate(0, 700px); }
-        .rotate-item:nth-child(6) { transform: rotate(75deg) translate(0, 700px); }
-        .rotate-item:nth-child(7) { transform: rotate(90deg) translate(0, 700px); }
-        .rotate-item:nth-child(8) { transform: rotate(105deg) translate(0, 700px); }
-        .rotate-item:nth-child(9) { transform: rotate(120deg) translate(0, 700px); }
-        .rotate-item:nth-child(10) { transform: rotate(135deg) translate(0, 700px); }
-        .rotate-item:nth-child(11) { transform: rotate(150deg) translate(0, 700px); }
-        .rotate-item:nth-child(12) { transform: rotate(165deg) translate(0, 700px); }
-        .rotate-item:nth-child(13) { transform: rotate(180deg) translate(0, 700px); }
-        .rotate-item:nth-child(14) { transform: rotate(195deg) translate(0, 700px); }
-        .rotate-item:nth-child(15) { transform: rotate(210deg) translate(0, 700px); }
-        .rotate-item:nth-child(16) { transform: rotate(225deg) translate(0, 700px); }
-        .rotate-item:nth-child(17) { transform: rotate(240deg) translate(0, 700px); }
-        .rotate-item:nth-child(18) { transform: rotate(255deg) translate(0, 700px); }
-        .rotate-item:nth-child(19) { transform: rotate(270deg) translate(0, 700px); }
-        .rotate-item:nth-child(20) { transform: rotate(285deg) translate(0, 700px); }
-        .rotate-item:nth-child(21) { transform: rotate(300deg) translate(0, 700px); }
-        .rotate-item:nth-child(22) { transform: rotate(315deg) translate(0, 700px); }
-        .rotate-item:nth-child(23) { transform: rotate(330deg) translate(0, 700px); }
-        .rotate-item:nth-child(24) { transform: rotate(345deg) translate(0, 700px); }
-        .rotate-item:nth-child(25) { transform: rotate(360deg) translate(0, 700px); }
+        .rotate-item:nth-child(1) { transform: translate(-50%, -50%) translate(0, -700px); }
+        .rotate-item:nth-child(2) { transform: translate(-50%, -50%) rotate(15deg) translate(0, -700px); }
+        .rotate-item:nth-child(3) { transform: translate(-50%, -50%) rotate(30deg) translate(0, -700px); }
+        .rotate-item:nth-child(4) { transform: translate(-50%, -50%) rotate(45deg) translate(0, -700px); }
+        .rotate-item:nth-child(5) { transform: translate(-50%, -50%) rotate(60deg) translate(0, -700px); }
+        .rotate-item:nth-child(6) { transform: translate(-50%, -50%) rotate(75deg) translate(0, -700px); }
+        .rotate-item:nth-child(7) { transform: translate(-50%, -50%) rotate(90deg) translate(0, -700px); }
+        .rotate-item:nth-child(8) { transform: translate(-50%, -50%) rotate(105deg) translate(0, -700px); }
+        .rotate-item:nth-child(9) { transform: translate(-50%, -50%) rotate(120deg) translate(0, -700px); }
+        .rotate-item:nth-child(10) { transform: translate(-50%, -50%) rotate(135deg) translate(0, -700px); }
+        .rotate-item:nth-child(11) { transform: translate(-50%, -50%) rotate(150deg) translate(0, -700px); }
+        .rotate-item:nth-child(12) { transform: translate(-50%, -50%) rotate(165deg) translate(0, -700px); }
+        .rotate-item:nth-child(13) { transform: translate(-50%, -50%) rotate(180deg) translate(0, -700px); }
+        .rotate-item:nth-child(14) { transform: translate(-50%, -50%) rotate(195deg) translate(0, -700px); }
+        .rotate-item:nth-child(15) { transform: translate(-50%, -50%) rotate(210deg) translate(0, -700px); }
+        .rotate-item:nth-child(16) { transform: translate(-50%, -50%) rotate(225deg) translate(0, -700px); }
+        .rotate-item:nth-child(17) { transform: translate(-50%, -50%) rotate(240deg) translate(0, -700px); }
+        .rotate-item:nth-child(18) { transform: translate(-50%, -50%) rotate(255deg) translate(0, -700px); }
+        .rotate-item:nth-child(19) { transform: translate(-50%, -50%) rotate(270deg) translate(0, -700px); }
+        .rotate-item:nth-child(20) { transform: translate(-50%, -50%) rotate(285deg) translate(0, -700px); }
+        .rotate-item:nth-child(21) { transform: translate(-50%, -50%) rotate(300deg) translate(0, -700px); }
+        .rotate-item:nth-child(22) { transform: translate(-50%, -50%) rotate(315deg) translate(0, -700px); }
+        .rotate-item:nth-child(23) { transform: translate(-50%, -50%) rotate(330deg) translate(0, -700px); }
+        .rotate-item:nth-child(24) { transform: translate(-50%, -50%) rotate(345deg) translate(0, -700px); }
+        .rotate-item:nth-child(25) { transform: translate(-50%, -50%) rotate(360deg) translate(0, -700px); }
 
-            @keyframes rotate {
-                from {transform: translate(-50%, -50%) roatate(0deg);}
-                to {transform: translate(-50%, -50%) rotate(360deg)}
-            }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+           
 
     /* 유저 가이드 */
 
@@ -254,7 +335,7 @@ header {
         line-height: 1.2;
         
 
-        color: white;
+        color: #FFFBFF;
     }
 
     .guide-content {
@@ -265,7 +346,7 @@ header {
         justify-content: center;
         align-items: center;
 
-        background-color: white;
+        background-color: #FFFBFF;
         border-radius: 2px;
 
         gap: 30px;
@@ -275,8 +356,12 @@ header {
         width: 65px;
         height: 65px;
 
-        object-fit: cover;
+        object-fit: contain;
         padding-left: 20px;
+    }
+
+    .guide-content-img img {
+        width: 100%;
     }
 
     .guide-content-text {
@@ -298,7 +383,7 @@ header {
     }
 
     .content-background {
-        background-color: black;
+        background-color: #131B23;
         width: 1000px;
         height: 400px;
     }
@@ -314,11 +399,14 @@ header {
     .content-box-img {
         position: absolute;
         bottom: 0px;
-        right: 30px;
+        right: 40px;
+
+        width: 550px;
+        
     }
 
     .content-box-img img {
-        width: 550px;
+        width: 100%;
         height: auto;
 
         object-fit: cover;
@@ -328,16 +416,16 @@ header {
 
     .footer-line-1{
         height: 12px;
-        width: 270px;
+        width: 235px;
 
-        background-color: blue;
+        background-color: #840032;
     }
 
     .footer-line-2{
         height: 12px;
         width: 730px;
 
-        background-color: black;
+        background-color: #131B23;
     }
 
         /* 세로 단 */
@@ -373,13 +461,13 @@ header {
 
         /* 가로 단 1 */
         .footer-box-1-1 {
-            width: 270px;
+            width: 235px;
 
             font-family: "Doto", sans-serif;
             font-size: 2.2rem;
             line-height: 1;
 
-            color: blue;
+            color: #840032;
         }
 
         .footer-box-1-2 {
@@ -437,7 +525,7 @@ header {
             font-size: 0.8rem;
             font-weight: 300;
 
-            color: blue;
+            color: #840032;
         }
 
         .footer-box-3-2 {
@@ -446,13 +534,202 @@ header {
             font-size: 0.8rem;
             font-weight: 300;
 
-            color: blue;
+            color: #840032;
 
             justify-content: flex-end;
         }
+        
+/*Atlas*/
+
+.atlas-wrap {
+    position: relative;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+
+    margin: 0 auto;
+}
+    /* 1 */
+
+    .top-frame {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        flex-direction: row;
+
+        width: 100%;
+        height: 20px;
+
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .top-left {}
+
+    .top-left a{
+        font-size: 1.15rem;
+        color: #131B23;
+
+        text-decoration: none;
+    }
+
+    .top-center {
+        font-family: "Doto", sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .top-right {
+        font-size: 1.15rem;
+    }
 
 
+    /* 메인 */
 
+    .top-line {
+        width: 100%;
+        height: 12px;
+
+        background-color: #131B23;
+    }
+
+    .middle-line {
+        width: 100%;
+        height: 2px;
+
+        background-color: #131B23;
+    }
+
+        /* atlas 네비게이션 */
+        
+        .atlas-nav-box {
+            display: flex;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            width: 100%;
+            height: auto;
+
+            background-color: #FFFBFF;
+        }
+
+        .atlas-nav {
+            width: 12.5%;
+            height: 30px;
+
+            background-color: #FFFBFF;
+
+            align-items: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .atlas-nav a{
+            font-size: 0.8rem;
+            color: #131B23;
+
+            text-decoration: none;
+            text-align: center;
+
+            padding-left: 10px;
+        }
+
+        .atlas-nav:hover {
+            background-color: #840032;
+        }
+
+        .atlas-nav:hover a {
+            color: #FFFBFF;
+        }
+
+        /* 뷰포트 */
+
+        .viewport-box {
+            position: relative;
+            display: flex;
+
+            width: 100%;
+            height: 550px;
+
+            background-color: #FFFA75;
+
+            overflow: hidden;
+
+            margin: 0 auto;
+        }
+
+        .viewport-scroll-frame {
+            position: sticky;
+            display: flex;
+
+            margin: 0 auto;
+            padding-top: 40px;
+
+            top: 0;
+
+            flex-direction: column;
+
+            justify-content: flex-start;
+
+            width: 800px;
+            height: 100%;
+            overflow-y: scroll;
+
+            gap: 500px;
+        }
+
+        .viewport-scroll-img {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .viewport-scroll-img img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+    /* 2 */
+
+
+    .bottom-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
+
+    width: 100%;
+    height: 20px;
+
+    padding-top: 20px;
+    
+    }
+
+    .bottom-left {
+        font-size: 0.7rem;
+    }
+
+    .bottom-center {
+        font-size: 0.7rem;
+    }
+
+    .bottom-right {
+        font-size: 0.7rem;
+    }
+
+
+    
 
 
 
