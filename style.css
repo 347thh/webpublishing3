@@ -27,6 +27,10 @@ header {
     background-color: #FFFBFF;
 }
 
+strong {
+    animation: blink 2s infinite;
+}
+
 /* class */
 
 .wrap {
@@ -85,6 +89,232 @@ header {
 
 .atlas-button:hover a {
     
+}
+
+/* what is MWA? 버튼 */
+
+.whatis-button {
+    position: fixed;
+    display: flex;
+
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+
+    background-color: #FFFBFF;
+    border: 2px solid #131B23;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    z-index: 1000;
+
+    transition: all 0.3s ease;
+}
+
+.whatis-button a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+
+    color: #131B23;
+
+    text-decoration: none;
+
+    padding-right: 30px;
+}
+
+.whatis-button:hover {
+    background-color: #FFFA75;
+    border: 2px solid #131B23;
+}
+
+
+/* 팝업 */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+    
+    width: 300px;
+    height: auto;
+    
+    background-color: white;
+    border: 2px solid #131B23;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transform: none;
+}
+
+.popup-content {
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.popup-close {
+    position: absolute;
+    display: flex;
+    right: 0px;
+    top: 0px;
+
+    width: 20px;
+    height: 20px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+
+    color: #FFFBFF;
+
+    cursor: pointer;
+
+    background-color: #131B23;
+    border-radius: 50px;
+}
+
+/* 사이즈 가이드 팝업 */
+
+.sgpopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    left: 100px;
+    top: 400px;
+
+    width: 200px;
+    height: auto;
+    
+    background-color: white;
+    border: 2px solid #131B23;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transform: none;
+}
+
+.sgpopup-content {
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.sgpopup-content p {
+    font-size: 1rem;
+
+    line-height: 2;
+}
+
+.sizeguide-dash {
+    width: 200px;
+    border: none;
+    border-top: 2px dashed #131b2372;
+
+    margin: 10px 0;
+}
+
+/* 오브젝트 팝업 */
+
+.objpopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+    
+    width: 400px;
+    height: auto;
+    
+    background-color: white;
+    border: 2px solid #131B23;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transform: none;
+}
+
+.objpopup-content {
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.objpopup-close {
+    position: absolute;
+    display: flex;
+    right: 0px;
+    top: 0px;
+
+    width: 20px;
+    height: 20px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+
+    color: #FFFBFF;
+
+    cursor: pointer;
+
+    background-color: #131B23;
+    border-radius: 50px;
+}
+
+.objpopup-title {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.objpopup-title h1 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.objpopup-title h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0 0 0;
+}
+
+.objpopup-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* 헤더 */
@@ -156,8 +386,8 @@ header {
         text-decoration: none;
         color: #131B23;
 
-        font-weight: 300;
-        font-size: 1.15rem;
+        font-weight: 400;
+        font-size: 1rem;
 
         width: 100%;
         text-align: right;
@@ -206,32 +436,10 @@ header {
     text-align: center;
     font-weight: 300;
     z-index: 2;
-}
 
-/* 어바웃 팝업 */
 
-.about-popup {
-    display: none;
-    position: fixed;
-
-    z-index: 1;
-
-    left: 0;
-    top: 0;
-
-    width: 500px;
-    height: 300px;
-
-    overflow: hidden;
-    
-    background-color: #FFFBFF;
-    border: 2px solid #131B23;
-}
-
-.about-popup-content {
-    padding: 20px;
-
-    border: border: 2px solid #131B23;
+    padding-top: 380px;
+    padding-bottom: 380px;
 }
 
 /* 이미지 캐러셀 */
@@ -336,6 +544,16 @@ header {
     border-radius: 2px;
 
     gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+.guide-content:hover {
+    animation: shake 0.3s ease-in infinite;
+    transform-origin: center center;
+}
+
+.guide-content:hover img {
+    animation: none;
 }
 
 .guide-content-img {
@@ -343,11 +561,13 @@ header {
     height: 65px;
 
     object-fit: contain;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 .guide-content-img img {
     width: 100%;
+
+    animation: blink 1.5s infinite;
 }
 
 .guide-content-text {
@@ -356,6 +576,20 @@ header {
 
     text-align: left;
     font-size: 1.15rem;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
 }
 
 /* 바로가기 */
@@ -380,6 +614,10 @@ header {
     font-size: 1.15rem;
 
     padding-top: 100px;
+}
+
+.content-box-text a {
+    color: #840032;
 }
 
 .content-box-img {
@@ -409,7 +647,7 @@ header {
 
 .footer-line-2{
     height: 12px;
-    width: 730px;
+    width: 765px;
 
     background-color: #131B23;
 }
@@ -466,6 +704,11 @@ header {
         width: 730px;
 
         gap: 30px;
+    }
+
+    .footer-box-1-2 a {
+        text-decoration: none;
+        color: #131b2383;
     }
 
     .footer-box-1-2-1 {
@@ -558,7 +801,7 @@ header {
     .top-left {}
 
     .top-left a{
-        font-size: 1.15rem;
+        font-size: 1rem;
         color: #131B23;
 
         text-decoration: none;
@@ -566,12 +809,12 @@ header {
 
     .top-center {
         font-family: "Doto", sans-serif;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
     .top-right {
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
 
 
@@ -606,7 +849,7 @@ header {
         }
 
         .atlas-nav {
-            width: 12.5%;
+            width: 14.2857%;
             height: 30px;
 
             background-color: #FFFBFF;
@@ -673,22 +916,57 @@ header {
         .viewport-scroll-img {
             width: 100%;
             height: auto;
-
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
 
         .viewport-scroll-img img {
             max-width: 100%;
             height: auto;
             object-fit: contain;
+
+            z-index: 999;
+        }
+
+        .viewport-scroll-img::after {
+            content: '1*1 micrometer';
+
+            position: absolute;
+
+            z-index: -1;
+
+            width: 400px;
+            height: 400px;
+
+            border: 3px solid #840032;
+
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #840032;
+
+            text-align: right;
+            padding: 10px;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+           
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .viewport-scroll-img:hover::after {
+            opacity: 1;
         }
 
     /* 2 */
 
 
     .bottom-frame {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -703,20 +981,34 @@ header {
     }
 
     .bottom-left {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     .bottom-center {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+
+        position: absolute;
+        left: 45%;
+        top: 50%;
     }
 
     .bottom-right {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
+    .bottom-left a {
+        display: flex;
+        gap: 5px;
 
-    
+        text-decoration: none;
 
+        color: #131b2377;
 
+        align-items: center;
+        justify-content: center;
+    }
 
-
+    .bottom-left img {
+        width: 13px;
+        height: auto;
+    }

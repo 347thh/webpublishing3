@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M W A ▶ [ Atlas ]</title>
+    <title>M W A ▶  A T L A S </title>
     <!--폰트-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,28 +15,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--사이즈 가이드-->
+    <div id="sizeguidepopup" class="sgpopup">
+        <div class="sgpopup-content">
+            <span class="popup-close">&times;</span>
+            <p>
+                1 meter<br>
+                1 millimeter = 10-3m<br>
+                1 micrometer = 10-6m<br>
+                1 nanometer = 10-9m<br>
+                1 picometer = 10-12m<br>
+                1 femtometer = 10-15m<br>
+            </p>
+                <hr class="sizeguide-dash">
+            <p>
+                확인되지 않은 길이<br>
+                1 attometer = 10-18m<br>
+                1 zeptometer = 10-21m<br>
+                1 yoctometer = 10-24m
+            </p>
+        </div>
+    </div>
+    <!--오브젝트 설명 팝업-->
+    <div id="bacteriophage" class="objpopup">
+        <div class="objpopup-content">
+            <span class="objpopup-close">&times;</span>
+            <div class="objpopup-title">
+                <h1>박테리오파지</h1>
+                <h2>bacteriophage</h2>
+            </div>
+            <p>
+                박테리아를 숙주세포로 하는 바이러스. <br>
+                박테리오는 '세균' 이라는 뜻이고 파지는 '먹는다' 는 뜻이다.<br>
+                즉, 세균을 잡아먹는 바이러스.
+            </p>
+        </div>
+    </div>
+
     <!--Atlas 페이지-->
     <section>
         <div class="atlas-wrap">
             <div class="top-frame">
                 <div class="top-left">
-                <a href=index.html target="_blank">←Back</a>
+                    <a href="index.html" target="_blank">←Back</a>
                 </div>
                 <div class="top-center">Atlas</div>
                 <div class="top-right">@2025</div>
             </div>
             <hr class="top-line">
             <div class="atlas-nav-box">
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-
-                <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
@@ -52,37 +79,45 @@
                 <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
+                
+                <div class="atlas-nav"><a href="#">농구공</a></div>
+                <div class="atlas-nav"><a href="#">농구공</a></div>
+                <div class="atlas-nav"><a href="#">농구공</a></div>
+                <div class="atlas-nav"><a href="#">농구공</a></div>
+                <div class="atlas-nav"><a href="#">농구공</a></div>
+                <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
 
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
-                <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
                 <div class="atlas-nav"><a href="#">농구공</a></div>
             </div>
             <hr class="middle-line">
             <div class="viewport-box">
                 <div class="viewport-scroll-frame">
-                    <div class="viewport-scroll-img"><img src="bacterio.gif" alt="박테리오파지"></div>
-                    <div class="viewport-scroll-img"><img src="bacterio.gif" alt="박테리오파지"></div>
-                    <div class="viewport-scroll-img"><img src="bacterio.gif" alt="박테리오파지"></div>
-                    <div class="viewport-scroll-img"><img src="bacterio.gif" alt="박테리오파지"></div>
+                    <div class="viewport-scroll-img">
+                        <a href="#bacteriophage">
+                            <img src="bacterio.gif" alt="박테리오파지">
+                        </a>
+                    </div>
                 </div>
             </div>
             <hr class="top-line">
             <div class="bottom-frame">
                 <div class="bottom-left">
-                    ¿ size guide
+                    <a href="#" id="sizeguide">
+                        <img src="question.icon.png">
+                        size guide</a>
                 </div>
                 <div class="bottom-center">
                     ⓒmicroscopic world
                 </div>
                 <div class="bottom-right">
-                     &nbsp;
+                    &nbsp;
                 </div>
             </div>
-
         </div>
     </section>
+       <!--Script-->
+       <script src="atlas.js"></script>
 </body>
 </html> 
