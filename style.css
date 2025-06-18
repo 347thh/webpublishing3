@@ -907,7 +907,7 @@ strong {
             display: flex;
 
             margin: 0 auto;
-            padding-top: 270px; padding-bottom: 100px;
+            
 
             top: 0;
 
@@ -919,7 +919,7 @@ strong {
             height: 100%;
             overflow-y: scroll;
 
-            gap: 700px;
+            gap: 1200px;
         }
 
         .viewport-scroll-img {
@@ -937,7 +937,7 @@ strong {
             height: 50%;
             object-fit: contain;
 
-            padding-top: 70px; padding-bottom: 70px;
+            
 
             z-index: 999;
         }
