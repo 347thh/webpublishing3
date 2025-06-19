@@ -438,7 +438,7 @@ strong {
     transform: translate(-50%, -50%);
     font-size: 1.3rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     z-index: 2;
 
 
@@ -819,10 +819,13 @@ strong {
         font-family: "Doto", sans-serif;
         font-size: 1.5rem;
         text-align: center;
+
+        padding-left: 100px;
     }
 
     .top-right {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        font-weight: 300;
     }
 
 
