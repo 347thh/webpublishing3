@@ -69,3 +69,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 }); 
+
+document.querySelectorAll('.popup-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var popupId = link.getAttribute('href').replace('#', '');
+      var popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'block';
+      } else {
+        console.warn('팝업 id를 찾을 수 없습니다:', popupId);
+      }
+    });
+  });
+  
+  document.querySelectorAll('.objpopup-close').forEach(function(closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      var popup = closeBtn.closest('.objpopup');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    });
+  });
