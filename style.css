@@ -935,6 +935,8 @@ strong {
         .viewport-scroll-img img {
             max-width: 100%;
             height: 50%;
+
+            
             
             padding-top: 70px;
             padding-bottom: 70px;
@@ -942,8 +944,68 @@ strong {
             z-index: 999;
         }
 
-        .viewport-scroll-img::after {
-            content: '1*1 micrometer';
+        .img-1::after {
+            content: "box: 1*1 meter\A diameter: 24.6cm \A Occupies approx. 4.75 of the box";
+        }
+
+        .img-1 img:hover {
+            transform: scale(0.25);
+        }
+
+        .img-2::after {
+            content: "box: 10*10 centimeter\A size: 4.5 * 0.2 cm \A Occupies approx. 0.9% of the box";
+        }
+
+        .img-2 img:hover {
+            transform: scale(0.5);
+        }
+
+        .img-3::after {
+            content: "box: 1*1 centimeter\A size: 0.5 * 0.2 cm \A Occupies approx. 10% of the box";
+        }
+
+        .img-3 img:hover {
+            transform: scale(0.5);
+        }
+
+        .img-1,
+        .img-2,
+        .img-3,
+        .img-4,
+        .img-5,
+        .img-6,
+        .img-7,
+        .img-8,
+        .img-9,
+        .img-10,
+        .img-11,
+        .img-12,
+        .img-13,
+        .img-14,
+        .img-15,
+        .img-16,
+        .img-17 {
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+
+        .img-1::after,
+        .img-2::after,
+        .img-3::after,
+        .img-4::after,
+        .img-5::after,
+        .img-6::after,
+        .img-7::after,
+        .img-8::after,
+        .img-9::after,
+        .img-10::after,
+        .img-11::after,
+        .img-12::after,
+        .img-13::after,
+        .img-14::after,
+        .img-15::after,
+        .img-16::after,
+        .img-17::after {
 
             position: absolute;
 
@@ -960,18 +1022,34 @@ strong {
 
             text-align: right;
             padding: 10px;
-
+ddin
            
 
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
+            
            
             opacity: 0;
             transition: opacity 0.3s ease;
+
+            white-space: pre-line;
         }
 
-        .viewport-scroll-img:hover::after {
+        .img-1:hover::after,
+        .img-2:hover::after,
+        .img-3:hover::after,
+        .img-4:hover::after,
+        .img-5:hover::after,
+        .img-6:hover::after,
+        .img-7:hover::after,
+        .img-8:hover::after,
+        .img-9:hover::after,
+        .img-10:hover::after,
+        .img-11:hover::after,
+        .img-12:hover::after,
+        .img-13:hover::after,
+        .img-14:hover::after,
+        .img-15:hover::after,
+        .img-16:hover::after,
+        .img-17:hover::after {
             opacity: 1;
         }
 
