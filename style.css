@@ -35,6 +35,10 @@ strong {
     animation: blink 2s infinite;
 }
 
+i {
+    color: #797979;
+}
+
 /* class */
 
 .wrap {
