@@ -70,6 +70,21 @@
         </div>
     </div>
 
+    <div id="micro" class="objpopup">
+        <div class="objpopup-content">
+            <span class="objpopup-close">&times;</span>
+            <div class="objpopup-title">
+                <h1>마이크로파</h1>
+                <h2>microwave</h2>
+            </div>
+            <p>
+                전자기파의 한 종류.
+                실제로 마이크로파 파장의 단위는 마이크로미터보다 훨씬 긴 밀리미터 단위이며, <br>
+                레이더, 휴대전화, 와이파이, 전자레인지 등에 사용되고 있다.
+            </p>
+        </div>
+    </div>
+
     <div id="ant" class="objpopup">
         <div class="objpopup-content">
             <span class="objpopup-close">&times;</span>
@@ -82,21 +97,6 @@
                 가장 개체수가 많은 동물로, 정확한 수치는 알 수 없지만, <br>
                 학자들은 약 1경~2경 마리로 추산하고 있다. <br>
                 지구상에 존재하는 개미의 무게 ≧ 지구상에 존재하는 사람의 무게
-            </p>
-        </div>
-    </div>
-
-    <div id="micro" class="objpopup">
-        <div class="objpopup-content">
-            <span class="objpopup-close">&times;</span>
-            <div class="objpopup-title">
-                <h1>마이크로파</h1>
-                <h2>microwave</h2>
-            </div>
-            <p>
-                전자기파의 한 종류.
-                실제로 마이크로파 파장의 단위는 마이크로미터보다 훨씬 긴 밀리미터 단위이며, <br>
-                레이더, 휴대전화, 와이파이, 전자레인지 등에 사용되고 있다.
             </p>
         </div>
     </div>
@@ -301,6 +301,25 @@
         </div>
     </div>
 
+    <!--오브젝트 링크 팝업-->
+
+    <div id="link-popup" class="objpopup">
+        <div class="objpopup-content">
+          <span class="objpopup-close">&times;</span>
+          <div>
+            <iframe
+              id="link-popup-iframe"
+              width="100%"
+              height="225"
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+    </div>
+
     <!--Atlas 페이지-->
     <section>
         <div class="atlas-wrap">
@@ -314,98 +333,110 @@
             <hr class="top-line">
             <div class="atlas-nav-box">
                 <div class="atlas-nav"><a href="#1">농구공</a></div>
-                <div class="atlas-nav"><a href="#2">성냥</a></div>
-                <div class="atlas-nav"><a href="#3">개미</a></div>
-                <div class="atlas-nav"><a href="#4">마이크로파</a></div> 
+                <div class="atlas-nav"><a href="#2">마이크로파</a></div>
+                <div class="atlas-nav"><a href="#3">성냥</a></div>
+                <div class="atlas-nav"><a href="#4">개미</a></div> 
                 <div class="atlas-nav"><a href="#5">모래 알갱이</a></div>
                 <div class="atlas-nav"><a href="#6">적혈구</a></div>
                 <div class="atlas-nav"><a href="#7">X 염색체</a></div>
 
-                <div class="atlas-nav"><a href="#9">박테리오파지</a></div>
-                <div class="atlas-nav"><a href="#10">DNA</a></div>
-                <div class="atlas-nav"><a href="#11">탄소</a></div>
-                <div class="atlas-nav"><a href="#12">감마선</a></div>
-                <div class="atlas-nav"><a href="#13">원자핵</a></div>
-                <div class="atlas-nav"><a href="#14">양성자</a></div>
-                <div class="atlas-nav"><a href="#15">중성자</a></div>
-                <div class="atlas-nav"><a href="#16">업 쿼크</a></div>
-                <div class="atlas-nav"><a href="#17">다운 쿼크</a></div>
-                <div class="atlas-nav"><a href="#18">끈</a></div>
+                <div class="atlas-nav"><a href="#8">박테리오파지</a></div>
+                <div class="atlas-nav"><a href="#9">DNA</a></div>
+                <div class="atlas-nav"><a href="#10">탄소</a></div>
+                <div class="atlas-nav"><a href="#11">감마선</a></div>
+                <div class="atlas-nav"><a href="#12">원자핵</a></div>
+                <div class="atlas-nav"><a href="#13">양성자</a></div>
+                <div class="atlas-nav"><a href="#14">중성자</a></div>
+                <div class="atlas-nav"><a href="#15">업 쿼크</a></div>
+                <div class="atlas-nav"><a href="#16">다운 쿼크</a></div>
+                <div class="atlas-nav"><a href="#17">끈</a></div>
             </div>
             <hr class="middle-line">
             <div class="viewport-box">
                 <div class="viewport-scroll-frame">
-                    <div class="img-1 viewport-scroll-img">
-                        <a href="#basketball">
-                            <img src="1.gif" alt="농구공" id="1">
+                    <div class="basketball viewport-scroll-img">
+                        <a href="#basketball" class="popup-link">
+                            <img src="basketball.gif" alt="농구공" id="1">
                         </a>
                     </div>
-                    <div class="img-2 viewport-scroll-img">
-                        <a href="#match">
-                            <img src="2.gif" alt="성냥" id="2">
+                    <div class="microwave viewport-scroll-img">
+                        <a href="#micro" class="popup-link">
+                            <img src="microwave.gif" alt="마이크로파파장" id="2">
                         </a>
                     </div> 
-                    <div class="img-3 viewport-scroll-img">
-                        <a href="#ant">
-                            <img src="3.gif" alt="개미" id="3">
+                    <div class="match viewport-scroll-img">
+                        <a href="#match" class="popup-link">
+                            <img src="match.gif" alt="성냥" id="3">
+                        </a>
+                    </div> 
+                    <div class="ant viewport-scroll-img">
+                        <a href="#ant" class="popup-link">
+                            <img src="ant.gif" alt="개미" id="4">
                         </a>
                     </div>
-                    <div class="viewport-scroll-img">
-                        <a href="#micro">
-                            <img src="4.gif" alt="마이크로파파장" id="4">
-                        </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#sand">
-                            <img src="5.gif" alt="모래알갱이" id="5">
-                        </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#blood">
-                            <img src="6.gif" alt="적혈구" id="6">
-                        </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#x">
-                            <img src="7.gif" alt="X염색체" id="7">
+                    <div class="sand viewport-scroll-img">
+                        <a href="#sand" class="popup-link">
+                            <img src="sand.gif" alt="모래알갱이" id="5">
                         </a>
                     </div>
-                    <div class="viewport-scroll-img">
-                        <a href="#bacteriophage">
-                            <img src="9.gif" alt="박테리오파지" id="9">
+                    <div class="rbc viewport-scroll-img">
+                        <a href="#blood" class="popup-link">
+                            <img src="rbc.gif" alt="적혈구" id="6">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#dna">
-                            <img src="10.gif" alt="DNA" id="10">
+                    </div>  
+                    <div class="x viewport-scroll-img">
+                        <a href="#x" class="popup-link">
+                            <img src="x.gif" alt="X염색체" id="7">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#c">
-                            <img src="11.gif" alt="탄소원자" id="11">
+                    </div>
+                    <div class="bacteriophage viewport-scroll-img">
+                        <a href="#bacteriophage" class="popup-link">
+                            <img src="bacteriophage.gif" alt="박테리오파지" id="8">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#gamma">
-                            <img src="4.gif" alt="감마선파장" id="12">
+                    </div>  
+                    <div class="dna viewport-scroll-img">
+                        <a href="#dna" class="popup-link">
+                            <img src="dna.gif" alt="DNA" id="9">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#He">
-                            <img src="13.gif" alt="헬륨원자핵" id="13">
+                    </div>  
+                    <div class="carbon viewport-scroll-img">
+                        <a href="#c" class="popup-link">
+                            <img src="carbon.gif" alt="탄소원자" id="10">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#proton">
-                            <img src="14.gif" alt="양성자" id="14">
+                    </div>  
+                    <div class="gamma viewport-scroll-img">
+                        <a href="#gamma" class="popup-link">
+                            <img src="gamma.gif" alt="감마선파장" id="11">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#neutron">
-                            <img src="15.gif" alt="중성자" id="15">
+                    </div>  
+                    <div class="nucleus viewport-scroll-img">
+                        <a href="#He" class="popup-link">
+                            <img src="nucleus.gif" alt="헬륨원자핵" id="12">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#up">
-                            <img src="16.gif" alt="윗쿼크">
+                    </div>  
+                    <div class="proton viewport-scroll-img">
+                        <a href="#proton" class="popup-link">
+                            <img src="proton.gif" alt="양성자" id="13">
                         </a>
-                    </div>  <div class="viewport-scroll-img" id="16">
-                        <a href="#down">
-                            <img src="17.gif" alt="아랫쿼크" id="17">
+                    </div>  
+                    <div class="neutron viewport-scroll-img">
+                        <a href="#neutron" class="popup-link">
+                            <img src="neutron.gif" alt="중성자" id="14">
                         </a>
-                    </div>  <div class="viewport-scroll-img">
-                        <a href="#string">
-                            <img src="18.gif" alt="끈" id="18">
+                    </div>  
+                    <div class="up viewport-scroll-img">
+                        <a href="#up" class="popup-link">
+                            <img src="up.gif" alt="윗쿼크" id="15">
+                        </a>
+                    </div>  
+                    <div class="down viewport-scroll-img">
+                        <a href="#down" class="popup-link">
+                            <img src="down.gif" alt="아랫쿼크" id="16">
+                        </a>
+                    </div>  
+                    <div class="superstring viewport-scroll-img">
+                        <a href="#string" class="popup-link">
+                            <img src="superstring.gif" alt="끈" id="17">
                         </a>
                     </div>
                 </div>
